@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Service
+metadata:
+  name: cicddemo-service
+  labels:
+    app: cicddemo-project
+  spec:
+    selector:
+      app: cicddemo-project
+    type: NodePort
+    ports:
+     -port: 8080
+      targetPort: 8080
+      nodePort: 30180
